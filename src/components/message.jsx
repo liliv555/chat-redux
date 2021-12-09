@@ -1,5 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from "react";
+import { emojify } from 'react-emojione';
 
 const Message = (props) => {
   const { created_at, author, content } = props.message;
@@ -10,7 +11,7 @@ const Message = (props) => {
         <span>{author}</span>
         <small> at {time}</small>
       </i>
-      <p>{content}</p>
+      <p>{emojify(content)}</p>
     </div>
   );
 };

@@ -15,7 +15,7 @@ class MessageList extends Component {
   }
 
   componentDidUpdate() {
-    this.chatSroll.scrollTop = this.chatSroll.scrollHeight;
+    this.list.scrollTop = this.list.scrollHeight;
   }
 
   componentWillUnmount() {
@@ -28,14 +28,11 @@ class MessageList extends Component {
 
   render () {
     return (
-      <div className="channel-container">
-        <div className="channel-title">
-          <span>Channel #{this.props.selectedChannel}</span>
-        </div>
-        <div className="channel-content" ref={(chatSroll) => { this.chatSroll = chatSroll; }}>
+      <div className="chat-container" ref={(list) => { this.list = list; }}>
+        <div className="channel-content">
           {
             this.props.messages.map((message) => {
-              return <Message key={message.content} message={message} />;
+              return <Message key={message.id} message={message} />;
             })
           }
         </div>

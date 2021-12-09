@@ -25,8 +25,8 @@ class MessageForm extends Component {
     return (
       <div className="form-container">
         <form onSubmit={this.handleSubmit}>
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-          <input type="submit" value="Send" />
+          <input className="type-area" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Type your message..." />
+          {/* <input className="send-button" type="submit" value="Send" /> */}
         </form>
       </div>
     );

@@ -1,12 +1,123 @@
 body {
   font-family: Helvetica;
 }
-.app {
-  margin: auto;
-  width: 50vw;
-  height: 40vh;
+
+#root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #aa4b6b;
+  background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+  background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
 }
 
-.channel-container {
+.app {
+  width: 50vw;
+  height: 600px;
+  display: flex;
+  background-color: rgba(49, 45, 45, 0.15);
+  border-radius: 10px;
+}
+
+.channels {
+  width: 20%;
+  margin: auto;
+}
+
+.chat {
+  background-color: rgba(49, 45, 45, 0.25);
+  border-radius: 10px;
+  color:white;
+  padding: 1em;
+  position: relative;
+  width: 80%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(180, 80, 113, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 10px;
+  background-color: rgb(180, 80, 113);
+}
+
+.channels-container > ul {
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.channels-container > ul > li {
+  list-style: none;
+  font-size: 0.8em;
+  margin: 2em 0;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.4em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.channels-container > ul > li:hover {
+  transform: scale(1.4);
+  transition: all 0.5s;
+}
+
+.channels-container > ul > li.active {
+  transform: scale(1.4);
+}
+
+.channels-container > ul > li.active:hover {
+  transform: scale(1.4);
+}
+
+.chat-container {
+  height: 86%;
+  padding-top: 2em;
   overflow-y: scroll;
+}
+
+// .channel-content {
+//   overflow-y: scroll;
+// }
+
+.form-container {
+  height: 10%;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}
+
+.type-area {
+  width: 97%;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  outline: none;
+  font-size: 18px;
+}
+
+::placeholder {
+  color: rgba($color: #fff, $alpha: 0.5);
+  font-size: 18px;
+}
+
+.message-container {
+  background-color: rgba(49, 45, 45, 0.35);
+  width: fit-content;
+  padding: 0.3em 1em;
+  margin: 0.5em;
+  border-radius: 10px;
+}
+
+.message-container p {
+  margin: 10px 0 0 10px;
 }

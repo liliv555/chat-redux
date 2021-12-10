@@ -1,6 +1,5 @@
 {
   "license": "UNLICENSED",
-  "homepage": "https://liliv555.github.io/chat-redux",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.0",
@@ -14,7 +13,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
-    "gh-pages": "^3.2.3",
+    "gh-pages": "^1.1.0",
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
@@ -36,11 +35,9 @@
     "redux-promise": "^0.6.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  }
+    "start": "webpack-dev-server --mode development",
+    "lint": "eslint './src/**/*.js' './src/**/*.jsx'",
+    "deploy": "webpack -p && gh-pages -d dist"
+  },
+  "homepage" : "https://liliv555.github.io/chat-redux"
 }
